@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+// the simple getting start from:  https://spring.io/guides/gs/serving-web-content/
+
 @Controller
 public class GreetingController{
 
