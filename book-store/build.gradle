@@ -29,3 +29,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("junit:junit")
 }
+
+
+
+bootRun {
+    addResources = true
+}
