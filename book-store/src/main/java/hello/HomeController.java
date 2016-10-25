@@ -38,4 +38,11 @@ public class HomeController{
 		return "form";
 	}
 
+	
+	
+	@RequestMapping("/book/new")
+	public String bookNew(){
+		return "new-book";
+	}
+	
 }
