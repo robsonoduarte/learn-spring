@@ -40,6 +40,19 @@ public class HomeController{
 
 	
 	
+	@RequestMapping("/empty")
+	public String empty(){
+		return "empty";
+	}
+	
+	
+	@RequestMapping("/template")
+	public String template(){
+		return "template";
+	}
+	
+	
+	
 	@RequestMapping("/book/new")
 	public String bookNew(){
 		return "new-book";
