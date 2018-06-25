@@ -1,4 +1,4 @@
-package hello;
+package br.com.mystudies.learnspring.bookstore.main;
 
 import static org.springframework.boot.SpringApplication.run;
 
