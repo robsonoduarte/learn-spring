@@ -10,6 +10,5 @@ public class HomeController {
 	public String home() {
 		System.out.println("Carregando produtos...");
 		return "home";
-	}
-	
+	}	
 }
