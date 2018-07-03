@@ -4,8 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import br.com.mystudies.learnspring.bookstore.domain.Product;
-
 @Controller
 public class ProductsController {
 
@@ -17,8 +15,13 @@ public class ProductsController {
 
 
 	@PostMapping(value="/products/save")
-	public String save(Product product) {
+	public String save() {
 		return "";
+	}
+
+	@GetMapping(value="/products/list")
+	public String list() {
+		return "/products/list";
 	}
 
 
