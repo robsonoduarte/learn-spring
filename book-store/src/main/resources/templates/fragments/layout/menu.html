@@ -12,9 +12,8 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="/home" onclick="location.reload(true);">INICIO</a></li>
-				<!-- <li><a href="/wizard">+ NFe(Deprecated)</a></li> -->
-				<li><a href="/+nfe" onclick="location.reload(true);">+ NFe</a></li>
+				<li><a th:href="@{/home}" >HOME</a></li>
+				<li><a th:href="@{/products/list}">PRODUCTS</a></li>
 				<li><a href="/consulta" onclick="location.reload(true);">CONSULTA</a></li>
 				<li class="dropdown ">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> CADASTROS<b class="caret"></b></a>
@@ -23,7 +22,7 @@
 						<li><a href="/cadastros/cliente" onclick="location.reload(true);"> Cliente</a></li>
 						<li><a href="/cadastros/emitente" onclick="location.reload(true);"> Emitente</a></li>
 					  	<li><a href="/cadastros/transportadora" onclick="location.reload(true);"> Transportadora</a></li>
-<!-- 						<li class="divider"></li>
+<!-- 					<li class="divider"></li>
 						<li><a href="/importacoes"> Importar Cadastros</a></li>
 						<li class="divider"></li> -->
 						<li><a href="/cadastros/natureza" onclick="location.reload(true);"> Natureza de Operação</a></li>
