@@ -8,7 +8,6 @@ public class HomeController {
 
 	@GetMapping("/home")
 	public String home() {
-		System.out.println("Carregando produtos...");
 		return "home";
 	}
 }
