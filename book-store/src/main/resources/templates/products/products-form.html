@@ -1,0 +1,24 @@
+<html ng-app="clickNFe" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="template">
+	<head>
+		<title>Clientes</title>
+ 		<div layout:fragment="css-page">
+   			<link rel="stylesheet" href="/css/parsley.css" type="text/css" media="screen, projection" />
+		</div>
+	</head>
+
+	<body>
+
+
+	<div layout:fragment="content"  ng-controller="mainController" >
+            <div th:replace="products/fragments/form :: #form"></div>
+     </div>
+
+
+
+	<div layout:fragment="js-page">
+ 		<script src="/js/parsley.min.js"></script>
+	   	<script src="/js/cadastros/cliente-form.js"></script>
+	</div>
+
+    </body>
+</html>
