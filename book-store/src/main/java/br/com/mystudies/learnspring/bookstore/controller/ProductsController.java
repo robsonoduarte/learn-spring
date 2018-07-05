@@ -21,7 +21,7 @@ public class ProductsController {
 
 	@GetMapping(value="/products/list")
 	public String list() {
-		return "/products/list";
+		return "/products/products-form";
 	}
 
 
