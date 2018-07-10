@@ -13,7 +13,6 @@ public class ProductsController {
 		return "/products/new";
 	}
 
-
 	@PostMapping(value="/products/save")
 	public String save() {
 		return "";
