@@ -1,12 +1,12 @@
-package br.com.ontracker.ontracker.api.newtec.controller;
+package br.com.mystudies.springboot.jms.activemq.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ontracker.ontracker.api.newtec.domain.Temp;
-import br.com.ontracker.ontracker.api.newtec.queue.TempQueueSender;
-import br.com.ontracker.ontracker.api.newtec.topic.TempTopicSender;
+import br.com.mystudies.springboot.jms.activemq.domain.Temp;
+import br.com.mystudies.springboot.jms.activemq.queue.TempQueueSender;
+import br.com.mystudies.springboot.jms.activemq.topic.TempTopicSender;
 
 @RestController
 public class TempController {

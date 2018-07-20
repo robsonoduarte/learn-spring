@@ -1,10 +1,10 @@
-package br.com.ontracker.ontracker.api.newtec.topic;
+package br.com.mystudies.springboot.jms.activemq.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
-import br.com.ontracker.ontracker.api.newtec.domain.Temp;
+import br.com.mystudies.springboot.jms.activemq.domain.Temp;
 
 @Component
 public class TempTopicSender {

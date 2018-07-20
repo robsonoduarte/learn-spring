@@ -1,18 +1,18 @@
-package br.com.ontracker.ontracker.api.newtec.topic;
+package br.com.mystudies.springboot.jms.activemq.topic;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
-import br.com.ontracker.ontracker.api.newtec.domain.Temp;
+import br.com.mystudies.springboot.jms.activemq.domain.Temp;
 
 @Component
-public class TempTopicConsumer2 {
+public class TempTopicConsumer1 {
 
 	
 	
 	
 	@JmsListener(destination="temp.topic", containerFactory="topicListenerFactory")
 	public void receive(Temp temp) {
-		System.out.println("Recebendo no consumer 2 => " + temp);
+		System.out.println("Recebendo no consumer 1 => " + temp);
 	}
 }

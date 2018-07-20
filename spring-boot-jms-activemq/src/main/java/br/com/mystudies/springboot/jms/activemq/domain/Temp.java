@@ -1,4 +1,4 @@
-package br.com.ontracker.ontracker.api.newtec.domain;
+package br.com.mystudies.springboot.jms.activemq.domain;
 
 public class Temp {
 

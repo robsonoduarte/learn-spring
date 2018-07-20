@@ -1,4 +1,4 @@
-package br.com.ontracker.ontracker.api.newtec;
+package br.com.mystudies.springboot.jms.activemq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

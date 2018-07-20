@@ -1,4 +1,4 @@
-package br.com.ontracker.ontracker.api.newtec.config;
+package br.com.mystudies.springboot.jms.activemq.config;
 
 import javax.jms.ConnectionFactory;
 
