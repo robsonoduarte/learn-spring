@@ -13,17 +13,17 @@ import org.springframework.jms.support.converter.MessageType;
 
 @Configuration
 public class JMSConfig {
-
 	
     @Bean
     public JmsListenerContainerFactory<?> topicListenerFactory(ConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         factory.setMessageConverter(messageConverter());
         factory.setConnectionFactory(connectionFactory);
-        factory.setPubSubDomain(true);
+        factory.setPubSubDomain(true); // enable topic to listener factory
         return factory;
     }
     
+    // default listener factory is in queue
     @Bean
     public JmsListenerContainerFactory<?> queueListenerFactory(ConnectionFactory connectionFactory) {
     	DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
@@ -33,26 +33,24 @@ public class JMSConfig {
     }
 
     
-	
 	@Bean
 	public JmsTemplate jmsTemplateTopic(ConnectionFactory connectionFactory){
 	    JmsTemplate template = new JmsTemplate();
 	    template.setConnectionFactory(connectionFactory);
 	    template.setMessageConverter(messageConverter());
-	    template.setPubSubDomain(true);
+	    template.setPubSubDomain(true); // enable jsmTemplate to send in topic
 	    return template;
 	}
 	
-	
+
+    // default jmsTemplate is in queue
 	@Bean
 	public JmsTemplate jmsTemplateQueue(ConnectionFactory connectionFactory){
 		JmsTemplate template = new JmsTemplate();
 		template.setConnectionFactory(connectionFactory);
 		template.setMessageConverter(messageConverter());
-		//template.setPubSubDomain(true);
 		return template;
 	}
-	
 	
 	
 	@Bean
@@ -60,16 +58,7 @@ public class JMSConfig {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
         converter.setTypeIdPropertyName("_type");
-        //converter.setObjectMapper(objectMapper());
         return converter;
     }
 
-/*    @Bean
-    public ObjectMapper objectMapper(){
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.registerModule(new JavaTimeModule());
-        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-        return mapper;
-    }*/
-	
 }
