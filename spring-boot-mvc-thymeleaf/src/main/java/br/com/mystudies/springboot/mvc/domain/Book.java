@@ -1,4 +1,4 @@
-package br.com.mystudies.learnspring.bookstore.domain;
+package br.com.mystudies.springboot.mvc.domain;
 
 public class Book {
 	public String title;
