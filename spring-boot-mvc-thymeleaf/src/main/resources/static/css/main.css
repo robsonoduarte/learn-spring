@@ -1,0 +1,574 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+    font-family: Century Gothic !important;
+}
+
+h5{
+    color: #23527c;
+    font-weight: bold;
+}
+/* ==========================================================================
+    TOPO
+   ========================================================================== */
+
+.navbar{
+    min-height: 70px;
+}
+.navbar-header{
+    min-height: 70px;
+}
+.navbar-brand{
+    margin-right:50px;
+}
+
+.navbar-brand img{
+    height: 35px;
+    margin-top: 5px;
+}
+
+
+.navbar-inverse {
+    background-color: #27A9E1;
+    background-image: none;
+    border:none;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{
+    text-shadow:none;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:white;
+}
+.info-company{
+    text-align: right;
+}
+
+.info-company a{
+    line-height: inherit !important;
+    margin-top: 10px;
+    border-right: 1px solid white;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover{
+    background-color: #021673;
+    background-image: none;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+    background-color: #021673;
+    background-image: none;
+
+}
+
+.icon-alarm a{
+    background: url(../img/icons/icon-alarm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width:20px;
+    height: 70px;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.icon-alarm .notification{
+    position: absolute;
+    bottom: 9px;
+    background-color: yellow;
+    width: 15px;
+    height: 15px;
+    left: 20px;
+    border-radius: 4px;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    display: none;
+}
+
+.icon-alarm .notification.active{
+    display: block;
+    cursor: pointer;
+}
+
+.pagination.sub-pagination a{
+    background-color: #eee;
+    border-color: #ddd;
+    color:gray
+}
+/* ==========================================================================
+    body
+   ========================================================================== */
+
+.corpo{
+    min-height: 500px;
+    margin-top: 50px;
+}
+
+.btn{
+    border-radius: 0px;
+    background-image: none;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.btn-default{
+    color: gray;
+}
+
+.btn-simple{
+    background-color: transparent;
+}
+
+
+.panel-heading{
+    background-image: none !important;
+}
+.panel-title{
+    float: left;
+    line-height: 40px;
+    font-weight: bold;
+    color: gray;
+}
+
+label{
+    color:gray;
+}
+
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-group .input-group-addon {
+    /* border-right: firebrick; */
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+    wizard
+   ========================================================================== */
+
+.panel-wizard .navbar a{
+    border-radius: 0px;
+    color: silver;
+}
+.panel-wizard .tab-content{
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 2px dashed silver;
+}
+
+.panel-wizard h3{
+    color:#27A9E1;
+    font-weight: bold;
+}
+
+.panel-wizard .pager .next a, .panel-wizard .pager .previous a{
+    border-radius: 0px;
+    padding: 15px;
+
+    color: white;
+    background-repeat: repeat-x;
+    border-color: #28a4c9;
+    background-color: #5bc0de;
+}
+
+
+.panel-wizard .pager .next.disabled a, .panel-wizard .pager .previous.disabled a{
+
+    background-color: silver;
+    border: 1px solid silver;
+    opacity: 0.6;
+}
+
+.btn-adicionar{
+    background-color: yellowgreen;
+    border: 1px solid #56b156;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+ }
+
+ .nav>li>a{
+    padding: 10px 10px;
+ }
+
+ .separador{
+  display: block;
+    height: 2px;
+    border-bottom: 2px dashed #d9edf7;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+
+ .btn-emitir{
+    color:white !important;
+ }
+/* ==========================================================================
+    importacao
+   ========================================================================== */
+
+.passo-a-passo{
+    font-size: 20px;
+}
+
+.passo-a-passo .passo{
+    float:left;
+    width: 30%;
+    margin-right: 10px;
+    padding: 30px;
+    min-height: 200px;
+    background-color: #2196F3;
+    
+       
+}
+
+.passo-a-passo h3{
+    color:white;
+    margin-bottom: 20px;
+}
+
+.passo-a-passo .btn-importar{
+    max-width: 100%;
+    
+}
+
+.passo-a-passo a{
+    color:yellow;
+}
+
+
+
+/* ==========================================================================
+    modal
+   ========================================================================== */
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #27A9E1;
+    color: white;
+    text-align: CENTER;
+    font-weight: bold;
+}
+
+.modal-max .modal-dialog{
+    width: 80%;
+}
+/* ==========================================================================
+    dashboard
+   ========================================================================== */
+
+.dashboard .alert{
+    background-color: silver;
+    color:white;
+    border: none;
+    border-radius: 0px;
+}
+
+.dashboard .alert h2{
+    float:right;
+    margin-top: 0px;
+}
+
+.dashboard .alert i{
+    float:left;
+    font-size: 20px;
+    opacity: 0.5;
+}
+.dashboard .alert p{
+    display: block;
+    text-align: right;
+    width: 100%;
+    clear: both;
+}
+
+.dashboard .alert.b1{
+    background-color: #27A9E1;
+}
+.dashboard .alert.b2{
+    background-color: #8CC63E;
+}
+.dashboard .alert.b3{
+    background-color: #F16521;
+}
+.dashboard .alert.b4{
+    background-color: #ED1C24;
+}
+
+footer{
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+    diversos
+   ========================================================================== */
+
+.mr{
+    text-align: right;
+}
+
+.btn-excluir, .btn-adicionar{
+    cursor:pointer;
+}
+
+.contagem{
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #28a4c9;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.badge{
+        border-radius: 4px;
+
+}
+
+
+.badge-blue{
+    background-color: #03A9F4;
+}
+
+.tab-search{
+    padding: 20px;
+    background-color: rgba(217, 237, 247, 0.25);
+}
+
+.html-exemplo{
+    display: none;
+}
+
+p.icon-carregando{
+    background-image: url("../img/gifs/carregando.gif");
+    width: 50px;
+    height: 50px;
+    position: center center;
+    background-repeat:no-repeat;
+    background-size: contain;
+    display: block;
+    margin: auto;
+
+}
+
+.collapse-table.in{
+    display: table-cell !important;
+}
+.detalhamento-nf{
+    font-size: 13px;
+}
+.detalhamento-nf .table{
+    background-color: rgba(217, 237, 247, 0.25);
+}
+
+.table-interna-consulta-collapse td{
+    cursor: pointer;
+}
+
+
+.table-interna-consulta-collapse h5{
+    font-weight: bold;   
+    color: #23527c;
+    cursor: pointer; 
+}
+
+
+.table-interna-consulta-collapse tr.collapsed h5{
+    font-weight: normal;   
+}
+
+.consulta-produto-interna{
+    padding-left: 30px;
+}
+
+
+.panel-impostos{
+    margin-bottom: 2px;
+}
+
+.logo-emitente{
+    max-height: 25px;
+}
+
+.box-image{
+    cursor: pointer;
+    border: 2px dashed silver;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+input[type=file].hide {
+    display: none;
+
+}
+
+/* ==========================================================================
+    responsivo
+   ========================================================================== */
+.navbar-toggle{
+    margin-top: 20px;
+}
+.navbar-inverse .navbar-toggle{
+
+    border:none;
+
+}
+
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+    background:none;
+}
+
+
+
+@media (min-width: 768px){
+    .navbar-nav>li>a{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 70px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .info-company{
+        text-align: left;
+    }
+
+
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+        border-top: dashed 1px white;
+    }
+
+}
+
+@media (max-width: 767px){
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: white;
+    }
+}
+
+
+@media (max-width:500px){
+
+    .panel-body{
+        padding: 5px;
+    }
+
+    .panel-wizard   .nav a{
+        padding: 5px;
+
+    }
+
+    .panel-wizard   .nav li{
+        width: 100%;
+
+    }
+}
+
+
+
+/* ==========================================================================
+    pesquisa e filtros
+   ========================================================================== */
+
+.box-filtro{
+    margin-bottom: 10px;
+    border:1px solid rgba(192, 192, 192, 0.22);
+ 
+
+}
+
+.box-filtro input{
+    font-size: 12px;
+}
+
+.box-filtro h4{
+    background-color: rgba(192, 192, 192, 0.22);
+    margin: 0px;
+    padding: 5px;
+}
+
+.box-filtro p{
+    padding: 10px;
+    font-size: 11px;
+}
+
+.box-filtro span{
+    padding-bottom: 3px;
+}
+
+.filtros-adicionados{
+     min-height: 50px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+
+}
+
+.btn-filtro-adicionado{
+    margin-right: 5px;
+    padding-top: 2px;
+}
+.btn-filtro-adicionado span{
+    display: block;
+}
+.btn-filtro-adicionado small{
+    font-size: 10px;
+}
+
+
+.cortina{
+    background-color: rgba(192, 192, 192, 0.46);
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    padding-top: 200px;
+}
+
+
+.slider.slider-horizontal{
+    width:100% !important;
+}
+
+/* input logo */
+
+.arquivo {
+  display: none;
+}
+
+.file {
+  line-height: 30px;
+  height: 30px;
+  border: 1px solid #A7A7A7;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  vertical-align: middle;
+  width: 300px;
+}
+
+
+.logo-emitente{
+    max-height: 35px;
+    float: right;
+    
+}
