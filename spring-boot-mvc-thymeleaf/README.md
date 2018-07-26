@@ -1,10 +1,4 @@
-Book Store
+Spring Boot MVC with Thymeleaf 
 ---------------------------------
-
-###This module use:
-
-- Spring MVC
-- Spring Security
-- Spring Boot
 
 **README IN CONSTRUCTION**
