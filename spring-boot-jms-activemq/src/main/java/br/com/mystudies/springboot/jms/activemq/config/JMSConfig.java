@@ -31,7 +31,6 @@ public class JMSConfig {
     	factory.setConnectionFactory(connectionFactory);
     	return factory;
     }
-
     
 	@Bean
 	public JmsTemplate jmsTemplateTopic(ConnectionFactory connectionFactory){
@@ -51,7 +50,6 @@ public class JMSConfig {
 		template.setMessageConverter(messageConverter());
 		return template;
 	}
-	
 	
 	@Bean
     public MessageConverter messageConverter() {
