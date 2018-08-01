@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/books")
 public class BooksController {
 
-
 	@GetMapping(value="/form")
 	public String form() {
 		return "/books/form";
