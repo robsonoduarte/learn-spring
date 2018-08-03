@@ -1,23 +1,14 @@
 package br.com.mystudies.springboot.jms.activemq.domain;
 
-public class Temp {
+public class Message {
 
-	private String name;
+	public String message;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Temp [name=" + name + "]";
+		return "Message [message=" + message + "]";
 	}
-	
 
-	
 	
 }
