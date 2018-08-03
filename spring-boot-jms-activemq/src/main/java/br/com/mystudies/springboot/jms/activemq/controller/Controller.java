@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.mystudies.springboot.jms.activemq.domain.Temp;
+import br.com.mystudies.springboot.jms.activemq.domain.Message;
 import br.com.mystudies.springboot.jms.activemq.queue.SenderQueue;
 import br.com.mystudies.springboot.jms.activemq.topic.SenderTopic;
 
@@ -12,23 +12,26 @@ import br.com.mystudies.springboot.jms.activemq.topic.SenderTopic;
 public class Controller {
 
 	@Autowired
-	private SenderTopic ts;
+	private SenderTopic senderTopic;
 	
 	@Autowired
-	private SenderQueue qs;
+	private SenderQueue senderQueue;
+	
 	
 	@GetMapping("topic")
 	public void topic() {
-		Temp temp = new Temp();
-		temp.setName("temp");
-		ts.send(temp);
+		Message message = new Message();
+		message.message = "Send message to Topic";
+		senderTopic.send(message);
 	}
 	
 	
 	@GetMapping("queue")
 	public void queue() {
-		Temp temp = new Temp();
-		temp.setName("temp");
-		qs.send(temp);
+		Message message = new Message();
+		message.message = "Send message to Queue";
+		senderQueue.send(message);
 	}
+	
+	
 }
