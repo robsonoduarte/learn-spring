@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
-import br.com.mystudies.springboot.jms.activemq.domain.Temp;
+import br.com.mystudies.springboot.jms.activemq.domain.Message;
 
 @Component
 public class SenderQueue {
@@ -13,7 +13,7 @@ public class SenderQueue {
 	@Autowired
 	private JmsTemplate jmsTemplateQueue;
 	
-	public void send(Temp temp) {
+	public void send(Message temp) {
 		jmsTemplateQueue.convertAndSend("temp.queue", temp);
 	}
 	
