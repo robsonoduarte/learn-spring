@@ -10,8 +10,8 @@ public class ConsumerQueue1 {
 
 	
 	@JmsListener(destination="temp.queue", containerFactory="queueListenerFactory")
-	public void consume(Message temp){
-		System.out.println("Queue Consumer1 ->" + temp);
+	public void consume(Message message){
+		System.out.println("Consumer Queue 1 ->" + message);
 	}
 	
 	
