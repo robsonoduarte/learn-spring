@@ -15,7 +15,7 @@ public class SenderTopic {
 	
 	
 	public void send(Message message) {
-		jmsTemplateTopic.convertAndSend("temp.topic", message);
+		jmsTemplateTopic.convertAndSend("topic", message);
 	}
 	
 }
