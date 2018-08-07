@@ -12,6 +12,11 @@ In this project we can see how use the Spring Boot with one Topic and one Queue 
 
 3 - [Sender and Consumer of Queue](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-jms-activemq/src/main/java/br/com/mystudies/springboot/jms/activemq/queue)
 
+##### Run Project
+```
+mvnw spring-boot:run
+```
+
 
 
 
