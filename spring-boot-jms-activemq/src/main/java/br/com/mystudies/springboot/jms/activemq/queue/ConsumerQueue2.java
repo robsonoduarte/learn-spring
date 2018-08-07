@@ -9,9 +9,9 @@ import br.com.mystudies.springboot.jms.activemq.domain.Message;
 public class ConsumerQueue2 {
 
 	
-	@JmsListener(destination="temp.queue", containerFactory="queueListenerFactory")
-	public void consume(Message temp){
-		System.out.println("Queue Consumer2 ->" + temp);
+	@JmsListener(destination="queue", containerFactory="queueListenerFactory")
+	public void consume(Message message){
+		System.out.println("Consumer Queue 2 ->" + message);
 	}
 	
 	
