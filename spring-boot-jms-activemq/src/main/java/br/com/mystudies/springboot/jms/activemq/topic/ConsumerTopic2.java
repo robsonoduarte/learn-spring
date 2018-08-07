@@ -11,8 +11,8 @@ public class ConsumerTopic2 {
 	
 	
 	
-	@JmsListener(destination="temp.topic", containerFactory="topicListenerFactory")
-	public void receive(Message temp) {
-		System.out.println("Recebendo no consumer 2 => " + temp);
+	@JmsListener(destination="topic", containerFactory="topicListenerFactory")
+	public void receive(Message message) {
+		System.out.println("Consumer Topic 2 => " + message);
 	}
 }
