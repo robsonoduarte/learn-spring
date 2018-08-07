@@ -13,8 +13,8 @@ public class SenderQueue {
 	@Autowired
 	private JmsTemplate jmsTemplateQueue;
 	
-	public void send(Message temp) {
-		jmsTemplateQueue.convertAndSend("temp.queue", temp);
+	public void send(Message message) {
+		jmsTemplateQueue.convertAndSend("queue", message);
 	}
 	
 }
