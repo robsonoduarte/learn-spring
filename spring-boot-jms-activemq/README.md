@@ -6,11 +6,11 @@ Demo project for Spring Boot 2 Using the ActiveMQ Embedded with Topic And Queue
 In this project we can see how use the Spring Boot with one Topic and one Queue in same project.
 
 
-1 - JMS Configuration 
+1 - [JMS Configuration](https://github.com/robsonoduarte/learn-spring/blob/master/spring-boot-jms-activemq/src/main/java/br/com/mystudies/springboot/jms/activemq/config/JMSConfig.java)
 
-2 - Sender and Consumer of Topic
+2 - [Sender and Consumer of Topic](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-jms-activemq/src/main/java/br/com/mystudies/springboot/jms/activemq/topic)
 
-3 - Sender and Consumer of Queue
+3 - [Sender and Consumer of Queue](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-jms-activemq/src/main/java/br/com/mystudies/springboot/jms/activemq/queue)
 
 
 
