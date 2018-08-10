@@ -9,12 +9,11 @@ import br.com.mystudies.springboot.jms.activemq.domain.Message;
 @Component
 public class SenderQueue {
 
-	
 	@Autowired
 	private JmsTemplate jmsTemplateQueue;
-	
+
 	public void send(Message message) {
 		jmsTemplateQueue.convertAndSend("queue", message);
 	}
-	
+
 }
