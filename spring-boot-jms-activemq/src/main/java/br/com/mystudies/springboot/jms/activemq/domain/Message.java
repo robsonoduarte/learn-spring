@@ -4,11 +4,9 @@ public class Message {
 
 	public String message;
 
-	
 	@Override
 	public String toString() {
 		return "Message [message=" + message + "]";
 	}
 
-	
 }
