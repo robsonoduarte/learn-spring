@@ -9,13 +9,11 @@ import br.com.mystudies.springboot.jms.activemq.domain.Message;
 @Component
 public class SenderTopic {
 
-	
 	@Autowired
 	private JmsTemplate jmsTemplateTopic;
-	
-	
+
+
 	public void send(Message message) {
 		jmsTemplateTopic.convertAndSend("topic", message);
 	}
-	
 }
