@@ -2,3 +2,6 @@
 
 
 > This Repository contains projects about learning in the [Spring Framework](https://spring.io/), **the projects are**:
+
+* [Spring Boot MVC with Thymeleaf](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-mvc-thymeleaf)
+* [Spring Boot And JMS with ActiveMQ](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-jms-activemq)
