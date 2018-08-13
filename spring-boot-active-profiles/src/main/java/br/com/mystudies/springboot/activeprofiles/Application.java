@@ -1,4 +1,4 @@
-package br.com.mystudies.springbootactiveprofiles;
+package br.com.mystudies.springboot.activeprofiles;
 
 import static org.springframework.boot.SpringApplication.run;
 

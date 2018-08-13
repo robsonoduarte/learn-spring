@@ -1,4 +1,4 @@
-package br.com.mystudies.springbootactiveprofiles;
+package br.com.mystudies.springboot.activeprofiles;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
