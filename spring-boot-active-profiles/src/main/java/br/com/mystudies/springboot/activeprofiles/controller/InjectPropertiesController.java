@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class PropertiesController {
+public class InjectPropertiesController {
 
 
 	@Value("${common.property}")
@@ -16,7 +16,7 @@ public class PropertiesController {
 	private String propertyByEnvironment;
 
 
-	@GetMapping(value="/properties")
+	@GetMapping(value="/injected/properties")
 	public String getProperties() {
 		return "Common property to application => " + commonProperty
 				+ " | Property by environment => " + propertyByEnvironment;
