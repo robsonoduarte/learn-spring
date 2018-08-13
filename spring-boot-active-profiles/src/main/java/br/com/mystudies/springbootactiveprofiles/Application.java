@@ -1,12 +1,13 @@
 package br.com.mystudies.springbootactiveprofiles;
 
-import org.springframework.boot.SpringApplication;
+import static org.springframework.boot.SpringApplication.run;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootActiveProfilesApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootActiveProfilesApplication.class, args);
+		run(Application.class, args);
 	}
 }
