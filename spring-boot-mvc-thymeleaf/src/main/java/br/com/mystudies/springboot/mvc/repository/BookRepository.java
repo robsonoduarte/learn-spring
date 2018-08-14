@@ -8,4 +8,5 @@ import br.com.mystudies.springboot.mvc.domain.Book;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
 
+
 }
