@@ -5,3 +5,4 @@
 
 * [Spring Boot MVC with Thymeleaf](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-mvc-thymeleaf)
 * [Spring Boot And JMS with ActiveMQ](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-jms-activemq)
+* [Spring Boot Acitve Profiles](https://github.com/robsonoduarte/learn-spring/tree/master/spring-boot-active-profiles)
