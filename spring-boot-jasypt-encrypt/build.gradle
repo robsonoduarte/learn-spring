@@ -28,3 +28,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('com.github.ulisesbocchio:jasypt-spring-boot-starter:2.1.0')
 }
+
+bootRun {
+   jvmArgs = ["-Djasypt.encryptor.password=password"]
+}
