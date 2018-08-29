@@ -17,7 +17,6 @@ public class BooksController {
 	private BookService service;
 
 
-
 	@GetMapping(value="/form")
 	public String form() {
 		return "/books/form";
@@ -38,5 +37,6 @@ public class BooksController {
 	public String list() {
 		return "/books/list";
 	}
+
 
 }
