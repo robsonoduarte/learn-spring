@@ -27,4 +27,5 @@ public class Book {
 	@Column(name="PAGES")
 	public int pages;
 
+
 }
