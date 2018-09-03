@@ -12,7 +12,6 @@ public class BookService {
 	@Autowired
 	private BookRepository repository;
 
-
 	public Book save(Book book) {
 		return repository.save(book);
 	}
