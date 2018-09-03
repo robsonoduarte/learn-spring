@@ -12,7 +12,6 @@ import br.com.mystudies.springboot.mvc.service.BookService;
 @RequestMapping("/books")
 public class BooksController {
 
-
 	@Autowired
 	private BookService service;
 
