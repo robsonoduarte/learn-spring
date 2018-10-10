@@ -20,8 +20,8 @@ import br.com.mystudies.springboot.repository.ImmobileRepository;
 public class ImmobileService {
 
 	private static final int PAGE_SIZE = 20;
-	private static final String PORTAL_ZAP = "ZAP";
-	private static final String PORTAL_VIVALREAL = "VIVAREAL";
+	private static final String PORTAL_PAZ = "PAZ";
+	private static final String PORTAL_LAERAVIV = "LAERAVIV";
 
 
 	@Autowired
@@ -38,12 +38,12 @@ public class ImmobileService {
 
 		validateParameter(parameters);
 
-		if(PORTAL_ZAP.equals(upperCase(parameters.getPortal()))) {
-			return immobileRepository.findAllImmobileToRentalForZap(pageable(parameters));
+		if(PORTAL_PAZ.equals(upperCase(parameters.getPortal()))) {
+			return immobileRepository.findAllImmobileToRentalForPaz(pageable(parameters));
 		}
 
-		if(PORTAL_VIVALREAL.equals(upperCase(parameters.getPortal()))) {
-			Page<Immobile> page = immobileRepository.findAllImmobileToRentalForVivaReal(pageable(parameters));
+		if(PORTAL_LAERAVIV.equals(upperCase(parameters.getPortal()))) {
+			Page<Immobile> page = immobileRepository.findAllImmobileToRentalForLaeraviv(pageable(parameters));
 
 			List<Immobile> content = new ArrayList<>();
 
@@ -71,9 +71,9 @@ public class ImmobileService {
 
 		validateParameter(parameters);
 
-		if(PORTAL_ZAP.equals(upperCase(parameters.getPortal()))) {
+		if(PORTAL_PAZ.equals(upperCase(parameters.getPortal()))) {
 
-			Page<Immobile> page = immobileRepository.findAllImmobileToSaleForZap(pageable(parameters));
+			Page<Immobile> page = immobileRepository.findAllImmobileToSaleForPaz(pageable(parameters));
 
 			List<Immobile> content = new ArrayList<>();
 
@@ -88,8 +88,8 @@ public class ImmobileService {
 			return newPage(page, content);
 		}
 
-		if(PORTAL_VIVALREAL.equals(upperCase(parameters.getPortal()))) {
-			return immobileRepository.findAllImmobileToSaleForVivaReal(pageable(parameters));
+		if(PORTAL_LAERAVIV.equals(upperCase(parameters.getPortal()))) {
+			return immobileRepository.findAllImmobileToSaleForLaeraviv(pageable(parameters));
 		}
 
 		return empty();

@@ -23,9 +23,6 @@ import org.springframework.data.domain.Pageable;
 import br.com.mystudies.springboot.domain.Immobile;
 import br.com.mystudies.springboot.domain.Location;
 import br.com.mystudies.springboot.repository.ImmobileRepository;
-import br.com.mystudies.springboot.service.BoundingBox;
-import br.com.mystudies.springboot.service.ImmobileParameters;
-import br.com.mystudies.springboot.service.ImmobileService;
 
 
 public class ImmobileServiceTest {
@@ -42,7 +39,7 @@ public class ImmobileServiceTest {
 
 
 	@Mock
-	private BoundingBox boundingBoxGrupoZapService;
+	private BoundingBox boundingBoxGrupoPazService;
 
 
 	@Mock
@@ -60,19 +57,19 @@ public class ImmobileServiceTest {
 	// MOCKS PARA TESTE DAS REGRAS DE BOUNDING BOX
 
 	@Mock
-	private Immobile immobileInBoundingBox; //imóvel no bounding box do grupo zap
+	private Immobile immobileInBoundingBox; //imóvel no bounding box do grupo paz
 
 	@Mock
-	private Immobile immobileOutBoundingBox; // imóvel fora bounding box do grupo zap
+	private Immobile immobileOutBoundingBox; // imóvel fora bounding box do grupo paz
 
 	@Mock
 	private Immobile immobileWithPricesModified; // imóvel com os preços recalculados
 
 	@Mock
-	private Location locationInBoundingBox; // location no bounding box do grupo zap
+	private Location locationInBoundingBox; // location no bounding box do grupo paz
 
 	@Mock
-	private Location locationOutBoundingBox; // location fora do bounding box do grupo zap
+	private Location locationOutBoundingBox; // location fora do bounding box do grupo paz
 
 
 
@@ -87,11 +84,11 @@ public class ImmobileServiceTest {
 
 
 	@Test
-	public void shouldGetThePropertiesToRentalForPortalZap() {
+	public void shouldGetThePropertiesToRentalForPortalPaz() {
 
 		when(immobileParameters.getPage()).thenReturn(1);
-		when(immobileParameters.getPortal()).thenReturn("zap");
-		when(immobileRepository.findAllImmobileToRentalForZap(of(1, 20))).thenReturn(page);
+		when(immobileParameters.getPortal()).thenReturn("paz");
+		when(immobileRepository.findAllImmobileToRentalForPaz(of(1, 20))).thenReturn(page);
 
 		Page<Immobile> pageResult =
 			  service.getPropertiesToRental(immobileParameters);
@@ -100,14 +97,14 @@ public class ImmobileServiceTest {
 
 		verify(immobileParameters).getPage();
 		verify(immobileParameters).getPortal();
-		verify(immobileRepository).findAllImmobileToRentalForZap(of(1, 20));
+		verify(immobileRepository).findAllImmobileToRentalForPaz(of(1, 20));
 
 	}
 
 
 
 	@Test
-	public void shouldGetThePropertiesToRentalForPortalVivaRealAndApplyCalcInRentalTotalPriceWhenImmobileInBoundingBoxOfGrupoZap() {
+	public void shouldGetThePropertiesToRentalForPortalLaeravivAndApplyCalcInRentalTotalPriceWhenImmobileInBoundingBoxOfGrupoPaz() {
 
 
 		page = new PageImpl<>(asList(immobileInBoundingBox,immobileOutBoundingBox),pageable, 50L);
@@ -115,13 +112,13 @@ public class ImmobileServiceTest {
 
 
 		when(immobileParameters.getPage()).thenReturn(1);
-		when(immobileParameters.getPortal()).thenReturn("vivareal");
-		when(immobileRepository.findAllImmobileToRentalForVivaReal(of(1, 20))).thenReturn(page);
+		when(immobileParameters.getPortal()).thenReturn("laeraviv");
+		when(immobileRepository.findAllImmobileToRentalForLaeraviv(of(1, 20))).thenReturn(page);
 		when(immobileInBoundingBox.location()).thenReturn(locationInBoundingBox);
 		when(immobileOutBoundingBox.location()).thenReturn(locationOutBoundingBox);
 		when(immobileInBoundingBox.increaseRentalTotalPrice(50)).thenReturn(immobileWithPricesModified);
-		when(boundingBoxGrupoZapService.isBoundingbox(locationInBoundingBox)).thenReturn(true);
-		when(boundingBoxGrupoZapService.isBoundingbox(locationOutBoundingBox)).thenReturn(false);
+		when(boundingBoxGrupoPazService.isBoundingbox(locationInBoundingBox)).thenReturn(true);
+		when(boundingBoxGrupoPazService.isBoundingbox(locationOutBoundingBox)).thenReturn(false);
 
 		Page<Immobile> pageResult =
 				service.getPropertiesToRental(immobileParameters);
@@ -134,19 +131,19 @@ public class ImmobileServiceTest {
 
 		verify(immobileParameters).getPage();
 		verify(immobileParameters, times(2)).getPortal();
-		verify(immobileRepository).findAllImmobileToRentalForVivaReal(of(1, 20));
+		verify(immobileRepository).findAllImmobileToRentalForLaeraviv(of(1, 20));
 		verify(immobileInBoundingBox).location();
 		verify(immobileOutBoundingBox).location();
 		verify(immobileInBoundingBox).increaseRentalTotalPrice(50);
 		verify(immobileOutBoundingBox, times(0)).increaseRentalTotalPrice(50);
-		verify(boundingBoxGrupoZapService).isBoundingbox(locationInBoundingBox);
-		verify(boundingBoxGrupoZapService).isBoundingbox(locationOutBoundingBox);
+		verify(boundingBoxGrupoPazService).isBoundingbox(locationInBoundingBox);
+		verify(boundingBoxGrupoPazService).isBoundingbox(locationOutBoundingBox);
 
 	}
 
 
 	@Test
-	public void shouldReturnOneEmptyPageOImmobileWhenPortalIsNotZapOrVivaReal() {
+	public void shouldReturnOneEmptyPageOImmobileWhenPortalIsNotPazOrLaeraviv() {
 
 		when(immobileParameters.getPage()).thenReturn(1);
 		when(immobileParameters.getPortal()).thenReturn(null);
@@ -159,8 +156,8 @@ public class ImmobileServiceTest {
 
 		verify(immobileParameters, times(2)).getPortal();
 		verify(immobileParameters, times(0)).getPage();
-		verify(immobileRepository, times(0)).findAllImmobileToRentalForVivaReal(of(1, 20));
-		verify(immobileRepository, times(0)).findAllImmobileToRentalForZap(of(1, 20));
+		verify(immobileRepository, times(0)).findAllImmobileToRentalForLaeraviv(of(1, 20));
+		verify(immobileRepository, times(0)).findAllImmobileToRentalForPaz(of(1, 20));
 
 	}
 
@@ -177,18 +174,18 @@ public class ImmobileServiceTest {
 
 
 	@Test
-	public void shouldGetThePropertiesToSaleForPortalZapAndApplyCalcInPriceWhenImmobileInBoundingBoxOfGrupoZap() {
+	public void shouldGetThePropertiesToSaleForPortalPazAndApplyCalcInPriceWhenImmobileInBoundingBoxOfGrupoPaz() {
 
 		page = new PageImpl<>(asList(immobileInBoundingBox,immobileOutBoundingBox),pageable, 50L);
 
 		when(immobileParameters.getPage()).thenReturn(1);
-		when(immobileParameters.getPortal()).thenReturn("zap");
-		when(immobileRepository.findAllImmobileToSaleForZap(of(1, 20))).thenReturn(page);
+		when(immobileParameters.getPortal()).thenReturn("paz");
+		when(immobileRepository.findAllImmobileToSaleForPaz(of(1, 20))).thenReturn(page);
 		when(immobileInBoundingBox.location()).thenReturn(locationInBoundingBox);
 		when(immobileOutBoundingBox.location()).thenReturn(locationOutBoundingBox);
 		when(immobileInBoundingBox.decreasePrice(10)).thenReturn(immobileWithPricesModified);
-		when(boundingBoxGrupoZapService.isBoundingbox(locationInBoundingBox)).thenReturn(true);
-		when(boundingBoxGrupoZapService.isBoundingbox(locationOutBoundingBox)).thenReturn(false);
+		when(boundingBoxGrupoPazService.isBoundingbox(locationInBoundingBox)).thenReturn(true);
+		when(boundingBoxGrupoPazService.isBoundingbox(locationOutBoundingBox)).thenReturn(false);
 
 		Page<Immobile> pageResult =
 			  service.getPropertiesToSale(immobileParameters);
@@ -200,23 +197,23 @@ public class ImmobileServiceTest {
 
 		verify(immobileParameters).getPage();
 		verify(immobileParameters).getPortal();
-		verify(immobileRepository).findAllImmobileToSaleForZap(of(1, 20));
+		verify(immobileRepository).findAllImmobileToSaleForPaz(of(1, 20));
 		verify(immobileInBoundingBox).location();
 		verify(immobileOutBoundingBox).location();
 		verify(immobileInBoundingBox).decreasePrice(10);
 		verify(immobileOutBoundingBox, times(0)).decreasePrice(10);
-		verify(boundingBoxGrupoZapService).isBoundingbox(locationInBoundingBox);
-		verify(boundingBoxGrupoZapService).isBoundingbox(locationOutBoundingBox);
+		verify(boundingBoxGrupoPazService).isBoundingbox(locationInBoundingBox);
+		verify(boundingBoxGrupoPazService).isBoundingbox(locationOutBoundingBox);
 
 	}
 
 
 	@Test
-	public void shouldGetThePropertiesToSaleForPortalVivaReal() {
+	public void shouldGetThePropertiesToSaleForPortalLaeraviv() {
 
 		when(immobileParameters.getPage()).thenReturn(1);
-		when(immobileParameters.getPortal()).thenReturn("vivareal");
-		when(immobileRepository.findAllImmobileToSaleForVivaReal(of(1, 20))).thenReturn(page);
+		when(immobileParameters.getPortal()).thenReturn("laeraviv");
+		when(immobileRepository.findAllImmobileToSaleForLaeraviv(of(1, 20))).thenReturn(page);
 
 		Page<Immobile> pageResult =
 				service.getPropertiesToSale(immobileParameters);
@@ -225,13 +222,13 @@ public class ImmobileServiceTest {
 
 		verify(immobileParameters).getPage();
 		verify(immobileParameters, times(2)).getPortal();
-		verify(immobileRepository).findAllImmobileToSaleForVivaReal(of(1, 20));
+		verify(immobileRepository).findAllImmobileToSaleForLaeraviv(of(1, 20));
 
 	}
 
 
 	@Test
-	public void shouldReturnOneEmptyPageOfImmobileWhenPortalIsNotZapOrVivaReal() {
+	public void shouldReturnOneEmptyPageOfImmobileWhenPortalIsNotPazOrLaeraviv() {
 
 		when(immobileParameters.getPage()).thenReturn(1);
 		when(immobileParameters.getPortal()).thenReturn(null);
@@ -244,8 +241,8 @@ public class ImmobileServiceTest {
 
 		verify(immobileParameters, times(2)).getPortal();
 		verify(immobileParameters, times(0)).getPage();
-		verify(immobileRepository, times(0)).findAllImmobileToSaleForVivaReal(of(1, 20));
-		verify(immobileRepository, times(0)).findAllImmobileToSaleForZap(of(1, 20));
+		verify(immobileRepository, times(0)).findAllImmobileToSaleForLaeraviv(of(1, 20));
+		verify(immobileRepository, times(0)).findAllImmobileToSaleForPaz(of(1, 20));
 
 	}
 
