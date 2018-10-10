@@ -2,7 +2,7 @@
 
 
 
-### Tecnologias Mais Relevantes Utilizadas:
+### Most Relevant Technologies Used:
 * [Java 8](https://www.java.com/pt_BR/download/faq/java8.xml)
 * [Spring Boot](https://spring.io/projects/spring-boot)
 * [Spring Data MongoDB](https://projects.spring.io/spring-data-mongodb/)
@@ -15,23 +15,20 @@
 * [MongoDB](https://www.mongodb.com/)
 * [Docker](https://www.docker.com/)
 
-### Requisitos:
+###Requirements:
 
-* [JDK 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) instalado e configurado no path.
-* [Docker](https://docs.docker.com/install/) instalado e configurado no path (deploy).
-* [Lombok IDEs](https://projectlombok.org/setup/overview) para importação do projeto em IDE.
+* [JDK 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) installed and configured in path.
+* [Docker](https://docs.docker.com/install/) installed and configured in path (deploy).
+* [Lombok IDEs](https://projectlombok.org/setup/overview) to import the project into IDE.
 
-### Exceutando o Projeto:
+### Running the Project:
 
-> O [Gradle Wrrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) foi utilizado no projeto, então não é obrigatório sua instalação.Para executar em Windows use **gradlew** em Linux **./gradlew**
-
-#### Excecutando Localmente:
+#### Running Locally:
 ```
 gradlew bootRun
 ```
-> O primeiro startup pode levar alguns minutos já que o Gradle resolverá todas as dependências do projeto e o Spring Boot realizará o download do MongoDB no seu startup.
 
-#### Executando os Testes:
+#### Running the Tests:
 ```
 gradle test
 ```
