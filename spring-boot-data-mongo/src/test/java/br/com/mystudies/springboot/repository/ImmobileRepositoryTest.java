@@ -18,7 +18,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import br.com.mystudies.springboot.domain.Immobile;
-import br.com.mystudies.springboot.repository.ImmobileRepository;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -36,7 +35,7 @@ public class ImmobileRepositoryTest {
 	public void shouldFindAllImmobileThatIsEligibleToRentalForVivaReal() {
 
 		Page<Immobile> pageResult =
-				repository.findAllImmobileToRentalForVivaReal(PageRequest.of(0, 20));
+				repository.findAllImmobileToRentalForLaeraviv(PageRequest.of(0, 20));
 
 
 		assertThat(pageResult.getContent(), not(empty()));
@@ -62,7 +61,7 @@ public class ImmobileRepositoryTest {
 	public void shouldFindAllImmobileThatIsEligibleToSaleForVivaReal() {
 
 		Page<Immobile> pageResult =
-				repository.findAllImmobileToSaleForVivaReal(PageRequest.of(0, 20));
+				repository.findAllImmobileToSaleForLaeraviv(PageRequest.of(0, 20));
 
 		assertThat(pageResult.getContent(), not(empty()));
 
@@ -88,7 +87,7 @@ public class ImmobileRepositoryTest {
 	public void shouldFindAllImmobileThatIsEligibleToRentalForVivaZap() {
 
 		Page<Immobile> pageResult =
-				repository.findAllImmobileToRentalForZap(PageRequest.of(0, 20));
+				repository.findAllImmobileToRentalForPaz(PageRequest.of(0, 20));
 
 
 		assertThat(pageResult.getContent(), not(empty()));
@@ -110,7 +109,7 @@ public class ImmobileRepositoryTest {
 	public void shouldFindAllImmobileThatIsEligibleToSaleForVivaZap() {
 
 		Page<Immobile> pageResult =
-				repository.findAllImmobileToSaleForZap(PageRequest.of(0, 20));
+				repository.findAllImmobileToSaleForPaz(PageRequest.of(0, 20));
 
 
 		assertThat(pageResult.getContent(), not(empty()));

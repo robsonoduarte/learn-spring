@@ -10,15 +10,15 @@ import br.com.mystudies.springboot.domain.Immobile;
 public interface ImmobileRepository extends MongoRepository<Immobile, String> {
 
 	@Query("{ $and: [{\"pricingInfos.businessType\" : \"RENTAL\"},{ \"pricingInfos.rentalTotalPrice\": { $lte: 4000 } },{ $where: \"this.pricingInfos.monthlyCondoFee  <= this.pricingInfos.rentalTotalPrice * 0.3\" },{\"address.geoLocation.precision\": {$ne : \"NO_GEOCODE\"}} ] }")
-	Page<Immobile> findAllImmobileToRentalForVivaReal(Pageable pageable);
+	Page<Immobile> findAllImmobileToRentalForLaeraviv(Pageable pageable);
 
 	@Query("{ $and: [{\"pricingInfos.businessType\" : \"SALE\"},{ \"pricingInfos.price\": { $lte: 700000 } },{\"address.geoLocation.precision\": {$ne : \"NO_GEOCODE\"}} ] }")
-	Page<Immobile> findAllImmobileToSaleForVivaReal(Pageable pageable);
+	Page<Immobile> findAllImmobileToSaleForLaeraviv(Pageable pageable);
 
 	@Query("{ $and: [{\"pricingInfos.businessType\" : \"RENTAL\"},{ \"pricingInfos.rentalTotalPrice\": { $gte: 3500 } },{\"address.geoLocation.precision\": {$ne : \"NO_GEOCODE\"}} ] }")
-	Page<Immobile> findAllImmobileToRentalForZap(Pageable pageable);
+	Page<Immobile> findAllImmobileToRentalForPaz(Pageable pageable);
 
 	@Query("{ $and: [{\"pricingInfos.businessType\" : \"SALE\"},{ \"pricingInfos.price\": { $gte: 600000 } },{ \"usableAreas\": { $gt: 3500 } },{\"address.geoLocation.precision\": {$ne : \"NO_GEOCODE\"}} ] }")
-	Page<Immobile> findAllImmobileToSaleForZap(Pageable pageable);
+	Page<Immobile> findAllImmobileToSaleForPaz(Pageable pageable);
 
 }
