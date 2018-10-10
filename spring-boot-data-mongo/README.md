@@ -31,11 +31,11 @@ gradlew bootRun
 ```
 > O primeiro startup pode levar alguns minutos já que o Gradle resolverá todas as dependências do projeto e o Spring Boot realizará o download do MongoDB no seu startup.
 
-#### Exectudando os Testes:
+#### Executando os Testes:
 ```
 gradle test
 ```
-> Os Testes **ImmobileRepositoryTest** e **ImmobileControllerTest** utilizam o contexto do [Spring Boot](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) e como estamos realizando o load dos dados em memória ( MongoDB Embarcado) no startup do Spring Boot, estes testes estão honerando o tempo total da execução.Entretanto, em um cenário mais real de desenvolvimento não estaríamos trabalhando com dados em memória assim melhorando a performance dos testes.
+
 
 #### Deploy (Docker):
 ```
