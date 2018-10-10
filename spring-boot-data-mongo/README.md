@@ -15,7 +15,7 @@
 * [MongoDB](https://www.mongodb.com/)
 * [Docker](https://www.docker.com/)
 
-###Requirements:
+### Requirements:
 
 * [JDK 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) installed and configured in path.
 * [Docker](https://docs.docker.com/install/) installed and configured in path (deploy).
