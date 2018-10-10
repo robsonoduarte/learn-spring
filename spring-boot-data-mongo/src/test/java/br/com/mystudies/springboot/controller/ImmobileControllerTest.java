@@ -24,7 +24,6 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import br.com.mystudies.springboot.controller.ImmobileController;
 import br.com.mystudies.springboot.domain.Immobile;
 import br.com.mystudies.springboot.service.ImmobileParameters;
 import br.com.mystudies.springboot.service.ImmobileService;
@@ -56,11 +55,11 @@ public class ImmobileControllerTest {
 	public void shouldGETThePropertiesToSaleInEndPointOfTheController() throws Exception {
 
 		ImmobileParameters parameters =
-				ImmobileParameters.builder().page(1).portal("vivareal").build();
+				ImmobileParameters.builder().page(1).portal("laeraviv").build();
 
 		when(immobileService.getPropertiesToSale(parameters)).thenReturn(page);
 
-		mockMvc.perform(get("/properties/sale?portal=vivareal&page=1"))
+		mockMvc.perform(get("/properties/sale?portal=laeraviv&page=1"))
 			.andExpect(status().isOk())
 			.andExpect(content().contentType(APPLICATION_JSON_UTF8))
 			.andExpect(jsonPath("$.content", hasSize(1)))
@@ -81,11 +80,11 @@ public class ImmobileControllerTest {
 	public void shouldGETThePropertiesToRentalInEndPointOfTheController() throws Exception {
 
 		ImmobileParameters parameters =
-				ImmobileParameters.builder().page(0).portal("zap").build();
+				ImmobileParameters.builder().page(0).portal("paz").build();
 
 		when(immobileService.getPropertiesToRental(parameters)).thenReturn(page);
 
-		mockMvc.perform(get("/properties/rental?portal=zap&page=0"))
+		mockMvc.perform(get("/properties/rental?portal=paz&page=0"))
 		.andExpect(status().isOk())
 		.andExpect(content().contentType(APPLICATION_JSON_UTF8))
 		.andExpect(jsonPath("$.content", hasSize(1)))
