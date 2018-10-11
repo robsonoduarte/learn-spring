@@ -1,14 +1,10 @@
 package br.com.mystudies.springboot.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Value;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Value
 public class Car {
 
-	private String id;
-	private String model;
+	private final String id;
+	private final String model;
 }
