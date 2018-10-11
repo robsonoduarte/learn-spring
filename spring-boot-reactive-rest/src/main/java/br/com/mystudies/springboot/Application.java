@@ -1,12 +1,16 @@
 package br.com.mystudies.springboot;
 
-import org.springframework.boot.SpringApplication;
+import static org.springframework.boot.SpringApplication.run;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import br.com.mystudies.springboot.client.GreetingWebClient;
+
 @SpringBootApplication
-public class SpringBootReactiveRestApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootReactiveRestApplication.class, args);
+		run(Application.class, args);
+		System.out.println(new GreetingWebClient().getResult());
 	}
 }
