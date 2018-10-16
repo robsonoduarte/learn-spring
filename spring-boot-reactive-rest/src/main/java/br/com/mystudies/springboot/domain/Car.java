@@ -5,6 +5,6 @@ import lombok.Value;
 @Value
 public class Car {
 
-	private final String id;
-	private final String model;
+	private String id;
+	private String model;
 }
