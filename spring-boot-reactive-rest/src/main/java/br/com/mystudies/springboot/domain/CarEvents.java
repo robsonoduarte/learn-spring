@@ -6,7 +6,6 @@ import lombok.Value;
 
 @Value
 public class CarEvents {
-
 	private Car model;
 	private Date when;
 }
