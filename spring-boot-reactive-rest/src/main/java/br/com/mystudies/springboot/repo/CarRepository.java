@@ -1,9 +1,9 @@
 package br.com.mystudies.springboot.repo;
 
-import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import br.com.mystudies.springboot.domain.Car;
 
-@Repository
-public interface CarRepository extends ReactiveMongoRepository<Car, String> {}
+public interface CarRepository extends MongoRepository<Car, String>{
+
+}

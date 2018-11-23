@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.mystudies.springboot.domain.Car;
-import br.com.mystudies.springboot.repo.CarRepository;
+import br.com.mystudies.springboot.repo.CarReactiveRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -13,7 +13,7 @@ public class FluxCarService {
 
 
 	@Autowired
-	private CarRepository repository;
+	private CarReactiveRepository repository;
 
 
 	public Flux<Car> all(){

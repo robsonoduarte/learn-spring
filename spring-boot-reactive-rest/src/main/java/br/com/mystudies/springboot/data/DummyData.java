@@ -14,7 +14,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import br.com.mystudies.springboot.domain.Car;
-import br.com.mystudies.springboot.repo.CarRepository;
+import br.com.mystudies.springboot.repo.CarReactiveRepository;
 
 @Component
 public class DummyData implements CommandLineRunner {
@@ -24,7 +24,7 @@ public class DummyData implements CommandLineRunner {
 
 
 	@Autowired
-	private CarRepository repository;
+	private CarReactiveRepository repository;
 
 
 
@@ -38,7 +38,7 @@ public class DummyData implements CommandLineRunner {
 
 
 		repository.saveAll(cars).subscribe(car -> {
-			LOGGER.info("Save the car --> " + car);
+		//	LOGGER.info("Save the car --> " + car);
 		});
 
 	}
