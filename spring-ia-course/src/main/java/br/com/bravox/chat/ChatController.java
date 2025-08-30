@@ -1,4 +1,4 @@
-package br.com.bravox;
+package br.com.bravox.chat;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
