@@ -12,3 +12,6 @@ This repo is based in this [Spring IA Course](https://www.youtube.com/watch?v=Fz
 - Prompts & System Messages ([video](https://www.youtube.com/watch?v=FzLABAppJfM&t=4520s))
   * [System Message as Guard ](https://github.com/robsonoduarte/learn-spring/blob/746f9638a17785090e5382244f057fbfbf587f69/spring-ia-course/src/main/java/br/com/bravox/prompt/BankController.java#L20-L31)
   * [Sytem Message as Template](https://github.com/robsonoduarte/learn-spring/blob/746f9638a17785090e5382244f057fbfbf587f69/spring-ia-course/src/main/java/br/com/bravox/prompt/ArticleController.java#L22-L49)
+
+- Structured Output Converter ([video](https://www.youtube.com/watch?v=FzLABAppJfM&t=5320s))
+  * [Entity Response](https://github.com/robsonoduarte/learn-spring/blob/0eb8508bb3b56f21fc398b728c5532857815ef0f/spring-ia-course/src/main/java/br/com/bravox/output/VacationPlan.java#L25-L33)
