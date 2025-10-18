@@ -16,7 +16,7 @@ This repo is based in this [Spring IA Course](https://www.youtube.com/watch?v=Fz
 - Structured Output Converter ([video](https://www.youtube.com/watch?v=FzLABAppJfM&t=5320s))
   * [Entity Response](https://github.com/robsonoduarte/learn-spring/blob/0eb8508bb3b56f21fc398b728c5532857815ef0f/spring-ia-course/src/main/java/br/com/bravox/output/VacationPlan.java#L25-L33)
 
-- Multimodal ([video](https://www.youtube.com/watch?v=FzLABAppJfM&t=6135s))
+- Multimodal ([video](https://youtu.be/FzLABAppJfM?t=7342))
   * [Image Detection](https://github.com/robsonoduarte/learn-spring/blob/e3010d37a61172dd5f5a053ad08fefe28edf1a01/spring-ia-course/src/main/java/br/com/bravox/multimodal/image/ImageDetection.java#L24-L29)
   * [Image Generation](https://github.com/robsonoduarte/learn-spring/blob/e3010d37a61172dd5f5a053ad08fefe28edf1a01/spring-ia-course/src/main/java/br/com/bravox/multimodal/image/ImageGeneration.java#L23-L41)
   * [Audion Generation](https://github.com/robsonoduarte/learn-spring/blob/e3010d37a61172dd5f5a053ad08fefe28edf1a01/spring-ia-course/src/main/java/br/com/bravox/multimodal/audio/AudioGeneration.java#L25-L43)
