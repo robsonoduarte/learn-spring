@@ -22,3 +22,4 @@ This repo is based in this [Spring IA Course](https://www.youtube.com/watch?v=Fz
   * [Audion Generation](https://github.com/robsonoduarte/learn-spring/blob/e3010d37a61172dd5f5a053ad08fefe28edf1a01/spring-ia-course/src/main/java/br/com/bravox/multimodal/audio/AudioGeneration.java#L25-L43)
 
 - ChatMemory ([video](https://youtu.be/FzLABAppJfM?t=8559))
+  * [In Memory Chat](https://github.com/robsonoduarte/learn-spring/blob/85a1e9a388386cc14a79b8410bbc4533a6e0385e/spring-ia-course/src/main/java/br/com/bravox/memory/MemoryController.java#L17)
