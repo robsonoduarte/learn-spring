@@ -23,3 +23,7 @@ This repo is based in this [Spring IA Course](https://www.youtube.com/watch?v=Fz
 
 - ChatMemory ([video](https://youtu.be/FzLABAppJfM?t=8559))
   * [In Memory Chat](https://github.com/robsonoduarte/learn-spring/blob/85a1e9a388386cc14a79b8410bbc4533a6e0385e/spring-ia-course/src/main/java/br/com/bravox/memory/MemoryController.java#L17)
+
+- RAG ([video](https://www.youtube.com/watch?v=FzLABAppJfM&t=11900s))
+  * [Vector Store](https://github.com/robsonoduarte/learn-spring/blob/f332c03ca6dbd7565c5e7ddd063bde699848040b/spring-ia-course/src/main/java/br/com/bravox/rag/RAGConfiguration.java#L26-L42)
+  * [Vector Store Advisor](https://github.com/robsonoduarte/learn-spring/blob/f332c03ca6dbd7565c5e7ddd063bde699848040b/spring-ia-course/src/main/java/br/com/bravox/rag/ModelsController.java#L17)
