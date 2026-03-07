@@ -29,5 +29,6 @@ This repo is based in this [Spring IA Course](https://www.youtube.com/watch?v=Fz
   * [Vector Store Advisor](https://github.com/robsonoduarte/learn-spring/blob/f332c03ca6dbd7565c5e7ddd063bde699848040b/spring-ia-course/src/main/java/br/com/bravox/rag/ModelsController.java#L17)
 
 - Tools ([video](https://youtu.be/FzLABAppJfM?t=11551))
-  * [Information Retrieval]()
-  * [Taking Action]()
+  * [Information Retrieval](https://github.com/robsonoduarte/learn-spring/blob/714b23be056bff4649c3c65d488ddf89bfb85f21/spring-ia-course/src/main/java/br/com/bravox/tools/DateTimeTools.java#L12-L15)
+  * [Taking Action](https://github.com/robsonoduarte/learn-spring/blob/714b23be056bff4649c3c65d488ddf89bfb85f21/spring-ia-course/src/main/java/br/com/bravox/tools/DateTimeTools.java#L17-L22)
+  * [Using the Tools](https://github.com/robsonoduarte/learn-spring/blob/714b23be056bff4649c3c65d488ddf89bfb85f21/spring-ia-course/src/main/java/br/com/bravox/tools/DateTimeController.java#L22-L31)
