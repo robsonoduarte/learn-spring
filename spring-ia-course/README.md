@@ -27,3 +27,7 @@ This repo is based in this [Spring IA Course](https://www.youtube.com/watch?v=Fz
 - RAG ([video](https://www.youtube.com/watch?v=FzLABAppJfM&t=11900s))
   * [Vector Store](https://github.com/robsonoduarte/learn-spring/blob/f332c03ca6dbd7565c5e7ddd063bde699848040b/spring-ia-course/src/main/java/br/com/bravox/rag/RAGConfiguration.java#L26-L42)
   * [Vector Store Advisor](https://github.com/robsonoduarte/learn-spring/blob/f332c03ca6dbd7565c5e7ddd063bde699848040b/spring-ia-course/src/main/java/br/com/bravox/rag/ModelsController.java#L17)
+
+- Tools ([video](https://youtu.be/FzLABAppJfM?t=11551))
+  * [Information Retrieval]()
+  * [Taking Action]()
