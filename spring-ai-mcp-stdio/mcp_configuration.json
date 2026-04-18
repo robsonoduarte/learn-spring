@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "spring-io-sessions": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "/home/bravox/git/bravox/learn-spring/spring-ai-mcp-stdio/build/libs/spring-ai-mcp-stdio-0.0.1-SNAPSHOT.jar"
+      ]
+    }
+  }
+}
