@@ -24,4 +24,4 @@ services:
       - prometheus
 
 volumes:
-  grafana-storage:services: {}
+  grafana-storage:
